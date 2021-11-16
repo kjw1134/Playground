@@ -1375,12 +1375,13 @@
     "1001": {
       "events": {},
       "links": {},
-      "address": "0x3616dF1aA161a50d7fcf7fc85bfB7F7e0F7f83f8",
-      "transactionHash": "0x85b7de9867db3f7918d0f62cab8246fadfb1e6e789b2ce461fe3ad1938199354"
+      "address": "0x3e5079C87369f876FC8Bf2ADD3675D9078FF1bDa",
+      "transactionHash": "0xab9cba2729fc2342dca7af1688f4e0077712645589281d69be4d47564881d17f"
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2021-11-16T16:46:03.380Z",
+  "updatedAt": "2021-11-16T17:06:16.908Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

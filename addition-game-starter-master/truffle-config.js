@@ -1,5 +1,5 @@
 // truffle.js config for klaytn.
-const PrivateKeyConnector = require('truffle-hdwallet-provider')
+const PrivateKeyConnector = require('@truffle/hdwallet-provider')
 const NETWORK_ID = '1001' //밥오밥 고유 아이디
 const GASLIMIT = '2000000'
 const URL = 'https://api.baobab.klaytn.net:8651'
