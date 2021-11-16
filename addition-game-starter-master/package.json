@@ -10,8 +10,7 @@
   "dependencies": {
     "caver-js":"^1.6.5",
     "spin.js":"^4.0.0",
-    "connect-privkey-to-provider":"^0.0.3"
-    
+    "truffle-hdwallet-provider":"^1.0.17"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",

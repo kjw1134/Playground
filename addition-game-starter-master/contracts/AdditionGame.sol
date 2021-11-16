@@ -1,10 +1,9 @@
 pragma solidity ^0.5.6;
 
-contract AdditionGame { 
+contract AdditionGame {
     address public owner;
 
-//test
-    constructor() public{
+    constructor() public {
         owner = msg.sender;
     }
     
