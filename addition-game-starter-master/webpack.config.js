@@ -3,7 +3,13 @@ const path = require('path')
 const fs = require('fs')
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
+
+
 module.exports = {
+
+  node:{
+    fs:'empty',
+  },
   entry: "./src/index.js",
   mode: 'development',
   output: {

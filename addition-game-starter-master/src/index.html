@@ -16,7 +16,60 @@
 </head>
 
 <body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class="text-center">클레이튼</h1>
+      <h2 class="text-center">덧셈 게임</h2>
+      <h3 class="text-center">
+        <code>3초안에 0.1클 지급</code>
+        <button type ="button"
+                class="btn btn-info pull-right"
+                id="login"
+                data-toggle="modal"
+                data-target="#loginModal"
+                onclick="App.handleLogin()">
+                로그인
+                
+              </button>
+        <button type = "button"
+                class= "btn btn-info pull-right"
+                id = "logout"
+                style="display: none;"
+                onclick="App.handleLogout()">
+                로그아웃
+              </button>
+      </h3>>
+      <h4 class="text-center" id="wallet-address">wallet address</h4>
+      <div class="text-center" id="address"></div>
+      <hr/>
+    </div>
+    </div>
+  </div>
 
+ <!-- 
+   <div class="modal fade" tabindex="-1" role="dialog" id="loginModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">        
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="keystore">Keystore</label>
+            <input type="file" id = "keystore" onchange="App.handleImport()">
+          </div>
+          <div class="form-group">
+            <label for="input-password">비밀번호</label>
+            <input type="password" class="form-control" id = "input-password" onchange="App.handlePassword()">
+            <p class="help-block" id="message"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+          <button type="button" class="btn btn-primary" id="submit" onclick="App.handleLogin()">제출</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+-->
 </body>
 
 </html>
