@@ -35,15 +35,34 @@
         <button type = "button"
                 class= "btn btn-info pull-right"
                 id = "logout"
-                style="display: none;"
+                style="display: none"
                 onclick="App.handleLogout()">
                 로그아웃
               </button>
-      </h3>>
-      <h4 class="text-center" id="wallet-address">wallet address</h4>
+      </h3>
+      <h4 class="text-center" id="wallet-address"></h4>
       <div class="text-center" id="address"></div>
-      <hr/>
+      <div class="text-center" id="contractBalance"></div>
+    <hr/>
     </div>
+    </div>
+
+  <br/>
+    <div id="spin"></div>
+    <div class="row text-center">
+      <div class="col-md-2 col-md-offset-5">
+        <div id="owner" style="display:none;">
+        <hr/>
+
+          <label> Klay 보내기</label>
+          <div class="input-group">
+            <input type="nuber" class="form-control" id="amount"/>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" onclick="App.deposit()">송금</button>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -67,9 +86,9 @@
           <button type="button" class="btn btn-primary" id="submit" onclick="App.handleLogin()">제출</button>
         </div>
       </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
--->
+   <!-- </div><!-- /.modal-dialog -->
+  <!--</div><!-- /.modal -->
+
 </body>
 
 </html>

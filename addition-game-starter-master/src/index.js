@@ -1,10 +1,12 @@
 import Caver from "caver-js";
-
+import { Spinner } from "spin.js";
 const config={
   rpcURL:'https://api.baobab.klaytn.net:8651'
 }
 
 const cav = new Caver(config.rpcURL);
+                                        //klay 전역상수
+const agContract = new cav.klay.Contract(DEPLOYED_ABI, DEPLOYED_ADDRESS);
 const App = {
 
   auth:{
@@ -17,26 +19,26 @@ const App = {
 
   },
 
-  handleImport: async function () {
-    const fileReader = new FileReader();
-    fileReader.readAsText(event.target.files[0]);
-    fileReader.onload = (event )=>{
-      try{
-        if(!this.checkValidKeystore(event.target.result)){
-            $('#message').text('invalid keystore file');
-            return;
-        }
+  // handleImport: async function () {
+  //   const fileReader = new FileReader();
+  //   fileReader.readAsText(event.target.files[0]);
+  //   fileReader.onload = (event )=>{
+  //     try{
+  //       if(!this.checkValidKeystore(event.target.result)){
+  //           $('#message').text('invalid keystore file');
+  //           return;
+  //       }
         
-        this.auth.keystore = evnet.target.result;
-        $('#message').text('valid keystore file\n input password');
-        document.querySelector('#input-password').focus();
+  //       this.auth.keystore = evnet.target.result;
+  //       $('#message').text('valid keystore file\n input password');
+  //       document.querySelector('#input-password').focus();
 
-      }catch(event){
-        $('#message').text('invalid keystore file');
-        return;
-      }
-    }
-  },
+  //     }catch(event){
+  //       $('#message').text('invalid keystore file');
+  //       return;
+  //     }
+  //   }
+  // },
 
   handlePassword: async function () {
     this.auth.password = evnet.target.value;
@@ -46,11 +48,14 @@ const App = {
 
     try { 
        const accounts = await klaytn.enable();
-       $('#wallet-address').text('address : ' + accounts);
+       //$('#wallet-address').text('address : ' + accounts);
+       this.changeUI(accounts);
 
      } catch (error) {  
       $('#wallet-address').text('connect wallet failed!');
       }
+
+     
     // if(this.auth.accessType=='keystore')
     // {
     //   try{
@@ -63,10 +68,10 @@ const App = {
     // }
   },
 
-  handleLogout: async function () {
-    this.removeWallet();
-    location.reload();
-  },
+  // handleLogout: async function () {
+  //   this.removeWallet();
+  //   location.reload();
+  // },
 
   generateNumbers: async function () {
 
@@ -78,41 +83,82 @@ const App = {
 
   deposit: async function () {
 
+    console.log(`deposit`);
+    var spinner = this.showSpinner();
+    const walletInstance = String(this.getWallet());
+    const callowner = await this.callOwner();
+
+      if(walletInstance){
+        if(callowner.toUpperCase() != walletInstance.toUpperCase()) return;
+        else{
+          var amount = $('#amount').val();
+          console.log(amount);
+          if(amount){
+            agContract.methods.deposit().send({
+              from:walletInstance,//비앱네 계정인증 완료된 계정만 사용가능
+              gas:'250000',
+              value:cav.utils.toPeb(amount, "KLAY")
+            });
+            // .once('tansactionHash', (txHash)=> {
+            //   //console.log(`txHash: ${txHash}`);
+            // })
+            // .once('receipt', (receipt)=>{
+            //   //console.log(`(#${receipt.blockNuber})`, receipt);
+            //   console.log(`spinner stop`);
+            //   spinner.stop();
+            //   alert(amount +'KLAY 컨트렉에 송급했습니다.');
+            //   location.reload(); // 페이지 새로고침
+            // })
+            // .once('error', (error)=>{
+            //   alert(error.message);
+            // });
+          }
+          return;
+        }
+      }
+      else{
+        console.log(`wallet instance =null`);
+        spinner.stop();
+      }
   },
 
   callOwner: async function () {
-
+    return await agContract.methods.owner().call();
   },
 
   callContractBalance: async function () {
-
+    return await agContract.methods.getBalance().call();
   },
 
   getWallet: function () {
 
+    if(klaytn.selectedAddress){
+      return klaytn.selectedAddress;//로그인계정
+    }
+    else{
+      console.log(`getwallet fail`);
+    }
   },
 
-  checkValidKeystore: function (keystore) {
-    const parsedKeystore = JSON.parse(keystore);
-    const isValidKeystore = parsedKeystore.version &&
-    parsedKeystore.id &&
-    parsedKeystore.address &&
-    parsedKeystore.crypto;
+  // checkValidKeystore: function (keystore) {
+  //   const parsedKeystore = JSON.parse(keystore);
+  //   const isValidKeystore = parsedKeystore.version &&
+  //   parsedKeystore.id &&
+  //   parsedKeystore.address &&
+  //   parsedKeystore.crypto;
 
-  return isValidKeystore;
+  // return isValidKeystore;
+  // },
 
+  // integrateWallet: function (privateKey) {
+  //   const walletInstance = cav.klay.accounts.privateKeyToAccount(privatekey);
+  //   cav.klay.accounts.wallet.add(walletInstance);
 
-  },
+  //   //페이지에 저장
+  //   sessionStorage.setItem('wallterInstance', JSON.stringify(walletInstance));
 
-  integrateWallet: function (privateKey) {
-    const walletInstance = cav.klay.accounts.privateKeyToAccount(privatekey);
-    cav.klay.accounts.wallet.add(walletInstance);
-
-    //페이지에 저장
-    sessionStorage.setItem('wallterInstance', JSON.stringify(walletInstance));
-
-    this.changeUI(walletInstance);
-  },
+  //   this.changeUI(walletInstance);
+  // },
 
   reset: function () {
     this.auth = {
@@ -128,22 +174,30 @@ const App = {
     // $('#loginModal').modal('hide');
     // $('#login').hide();
     // $('#logout').show();
-     $('#wallet-address').append('<br>'+'<p>'+'my account address: ' + walletInstance.address +'</p>');
+     $('#wallet-address').append('<br>'+'<p>'+'my account address: ' + walletInstance +'</p>');
+     $('#contractBalance'). append('<p>'+ '이벤트 잔액 :' +  cav.utils.fromPeb(await this.callContractBalance(), "KLAY") + 'KLAY' + '</p>');
 
+     const thisOwnerAddress =await this.callOwner();     
+     const curAddress = String(walletInstance);
+
+     if(thisOwnerAddress.toUpperCase()===curAddress.toUpperCase()){
+       $('#owner').show();
+     }
   },
 
-  removeWallet: function () {
-    cav.klay.accounts.wallet.clear();
-    sessionStorage.removeItem('walletInstance');
-    this.reset();
-  },
+  // removeWallet: function () {
+  //   cav.klay.accounts.wallet.clear();
+  //   sessionStorage.removeItem('walletInstance');
+  //   this.reset();
+  // },
 
   showTimer: function () {
 
   },
 
   showSpinner: function () {
-
+    var target = document.getElementById("spin");
+    return new Spinner(opts).spin(target)
   },
 
   receiveKlay: function () {
