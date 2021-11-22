@@ -5,7 +5,7 @@ const config={
 }
 
 const cav = new Caver(config.rpcURL);
-                                        //klay 전역상수
+                                        //bApp내 사용가능 전역상수
 const agContract = new cav.klay.Contract(DEPLOYED_ABI, DEPLOYED_ADDRESS);
 const App = {
 
@@ -65,7 +65,7 @@ const App = {
     //   catch (e){
     //     $('#message').text('password is not correct');
     //   }
-    // }
+    // } 
   },
 
   // handleLogout: async function () {
@@ -74,11 +74,38 @@ const App = {
   // },
 
   generateNumbers: async function () {
+    var num1 = Math.floor((Math.random()*50) +10);//0~1 소수점
+    var num2 = Math.floor((Math.random()*50) +10);//0~1 소수점
+
+    sessionStorage.setItem('result', num1+num2);
+
+    $('#start').hide();
+    $('#num1').text(num1);
+    $('#num2').text(num2);
+    $('#qeustion').show();
+
+    document.querySelector('#answer').focus();
+
+    this.showTimer();
 
   },
 
   submitAnswer: async function () {
+    const result = sessionStorage.getItem('result');
+    var answer = $('#answer').val();
 
+    if(answer==result){
+      if(confirm("0.1 klay 받기")){
+        if(await this.callContractBalance() >= 0.1){
+          this.receiveKlay();
+        }else{
+          alert("klay=0");
+        }
+      }
+    }
+    else{
+      alert("fail");
+    }
   },
 
   deposit: async function () {
@@ -88,23 +115,24 @@ const App = {
     const walletInstance = String(this.getWallet());
     const callowner = await this.callOwner();
 
+    
+
       if(walletInstance){
         if(callowner.toUpperCase() != walletInstance.toUpperCase()) return;
         else{
           var amount = $('#amount').val();
-          console.log(amount);
+
           if(amount){
             agContract.methods.deposit().send({
-              from:walletInstance,//비앱네 계정인증 완료된 계정만 사용가능
-              gas:'250000',
-              value:cav.utils.toPeb(amount, "KLAY")
-            });
-            // .once('tansactionHash', (txHash)=> {
-            //   //console.log(`txHash: ${txHash}`);
+              from:callowner,//비앱네 계정인증 완료된 계정만 사용가능
+              value:cav.utils.toPeb(amount, "KLAY"),
+              gas:'250000'
+            })
+            // .once('transactionHash', (transactionHash)=> {
+            //   console.log(`txHash: ${transactionHash}`);
             // })
             // .once('receipt', (receipt)=>{
-            //   //console.log(`(#${receipt.blockNuber})`, receipt);
-            //   console.log(`spinner stop`);
+            //   console.log(`(#${receipt.blockNuber})`, receipt);
             //   spinner.stop();
             //   alert(amount +'KLAY 컨트렉에 송급했습니다.');
             //   location.reload(); // 페이지 새로고침
@@ -112,6 +140,7 @@ const App = {
             // .once('error', (error)=>{
             //   alert(error.message);
             // });
+            spinner.stop();
           }
           return;
         }
@@ -174,6 +203,7 @@ const App = {
     // $('#loginModal').modal('hide');
     // $('#login').hide();
     // $('#logout').show();
+    $('#game').show();
      $('#wallet-address').append('<br>'+'<p>'+'my account address: ' + walletInstance +'</p>');
      $('#contractBalance'). append('<p>'+ '이벤트 잔액 :' +  cav.utils.fromPeb(await this.callContractBalance(), "KLAY") + 'KLAY' + '</p>');
 
@@ -192,7 +222,22 @@ const App = {
   // },
 
   showTimer: function () {
+    var sec = 10;
+    $('#timer').text(sec);
 
+    var interval = setInterval(() =>{
+      $('#timer').text(--sec);
+
+      if(sec <=0)
+      {
+        $('#timer').text('');
+        $('#answer').text('');
+        $('#qeustion').hide();
+        $('#start').show();
+        clearInterval(interval);
+
+      }
+    },1000);
   },
 
   showSpinner: function () {
@@ -201,7 +246,33 @@ const App = {
   },
 
   receiveKlay: function () {
+    var spinner = this.showSpinner();
 
+    const walltetInstance = this.getWallet();
+
+    if(!walletInstance) return;
+
+    agContract.methods.transfer(cav.utils.toPeb("0.1", "KLAY")).send({
+      from:walletInstance,
+      gas:'250000'
+    }).then(function(receipt){
+      if(receipt.status){
+        spinner.stop();
+        alert("0.1Klay transfer");
+        $('#transaction').html("");
+        $('#transaction')
+        .append(`<p><a href= 'https://baobab.scope.klaytn.com/tx/${receipt.transactionHash}' 
+        target='_blank'> Klaytn scope </a></p>`);
+
+        return agContract.methods.getBalance().call()
+        .then(function(balance){
+          $('#contractBalance').html("");
+          $('#contractBalance')
+          .append('<p>' + 'balance : ' + cav.utils.fromPeb(balance, "KLAY")+'KLAY' + '</p>');
+        })
+
+      }
+    })
   }
 };
 
