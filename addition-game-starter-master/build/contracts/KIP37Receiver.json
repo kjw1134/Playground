@@ -1,0 +1,904 @@
+{
+  "contractName": "KIP37Receiver",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "ids",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "values",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onKIP37BatchReceived",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onKIP37Received",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"onKIP37BatchReceived\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"onKIP37Received\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"onKIP37BatchReceived(address,address,uint256[],uint256[],bytes)\":{\"details\":\"Handles the receipt of a multiple KIP37 token types. This function is called at the end of a `safeBatchTransferFrom` after the balances have been updated. To accept the transfer(s), this must return `bytes4(keccak256(\\\"onKIP37BatchReceived(address,address,uint256[],uint256[],bytes)\\\"))` (i.e. 0x9b49e332, or its own function selector).\",\"params\":{\"data\":\"Additional data with no specified format\",\"from\":\"The address which previously owned the token\",\"ids\":\"An array containing ids of each token being transferred (order and length must match values array)\",\"operator\":\"The address which initiated the batch transfer (i.e. msg.sender)\",\"values\":\"An array containing amounts of each token being transferred (order and length must match ids array)\"},\"return\":\"`bytes4(keccak256(\\\"onKIP37BatchReceived(address,address,uint256[],uint256[],bytes)\\\"))` if transfer is allowed\"},\"onKIP37Received(address,address,uint256,uint256,bytes)\":{\"details\":\"Handles the receipt of a single KIP37 token type. This function is called at the end of a `safeTransferFrom` after the balance has been updated. To accept the transfer, this must return `bytes4(keccak256(\\\"onKIP37Received(address,address,uint256,uint256,bytes)\\\"))` (i.e. 0xe78b3325, or its own function selector).\",\"params\":{\"data\":\"Additional data with no specified format\",\"from\":\"The address which previously owned the token\",\"id\":\"The ID of the token being transferred\",\"operator\":\"The address which initiated the transfer (i.e. msg.sender)\",\"value\":\"The amount of tokens being transferred\"},\"return\":\"`bytes4(keccak256(\\\"onKIP37Received(address,address,uint256,uint256,bytes)\\\"))` if transfer is allowed\"},\"supportsInterface(bytes4)\":{\"details\":\"See `IKIP13.supportsInterface`.     * Time complexity O(1), guaranteed to always use less than 30 000 gas.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Receiver.sol\":\"KIP37Receiver\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/introspection/IKIP13.sol\":{\"keccak256\":\"0xf7415711dbec40bc633af7d8cb5c3c0bc3d1ed97fd8c13f795a03eb3073ea219\",\"urls\":[\"bzz-raw://c3583b6a39425cc359116200869b24b50c2293c6e68d09c4d4b804861b431ae0\",\"dweb:/ipfs/QmWZWD7oEtz7QbM5AmUtrbZpDVkxzeX8JGcVkUVmvRRaVa\"]},\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/introspection/KIP13.sol\":{\"keccak256\":\"0x84681701e79f53ba1e9660b6a130bba31880d66cee996ab7d5567d239155c6da\",\"urls\":[\"bzz-raw://f35082a91314003570fca4b2426cd3f79db0eb846a456842db4a11f473db924d\",\"dweb:/ipfs/QmYdHAyrXSKjiDxji2L7bTpuPSSqjkwaKT7WM98Yrcy8KD\"]},\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/IKIP37Receiver.sol\":{\"keccak256\":\"0x83496b998885cfa74818ccd60afaca8c9f54c70ef6f4487b3a0b904492c2bc30\",\"urls\":[\"bzz-raw://91c2ed0e1537e01e3db85a43c45beea791373a0c71b9d067cd26454300e52b80\",\"dweb:/ipfs/Qmf1656ZesFhztMGgZY7uC8A5GgZXZyy9FCTvJrHfJnb9X\"]},\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Receiver.sol\":{\"keccak256\":\"0xf02f2cbbd9bffa04013afcad160419b298b8ef52068c8ad66812e5e47f4e9738\",\"urls\":[\"bzz-raw://2038845dafa5d1a22beca39fec032c726b0058fb0bff35cfc98cb1a4d82ee68c\",\"dweb:/ipfs/QmSnpbGVG4VP8KAoG9GRKfVsU9QHDbY2xSVrbSvX4wsTTr\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.5.0;\n\nimport \"./IKIP37Receiver.sol\";\nimport \"../../introspection/KIP13.sol\";\n\ncontract KIP37Receiver is KIP13, IKIP37Receiver {\n    constructor() public {\n        _registerInterface(\n            KIP37Receiver(0).onKIP37Received.selector ^\n                KIP37Receiver(0).onKIP37BatchReceived.selector\n        );\n    }\n}\n",
+  "sourcePath": "C:\\Users\\kjw\\Desktop\\newproject_branch\\addition-game-starter-master\\contracts\\klaytn-contracts\\token\\KIP37\\KIP37Receiver.sol",
+  "ast": {
+    "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Receiver.sol",
+    "exportedSymbols": {
+      "KIP37Receiver": [
+        6843
+      ]
+    },
+    "id": 6844,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6818,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:65"
+      },
+      {
+        "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/IKIP37Receiver.sol",
+        "file": "./IKIP37Receiver.sol",
+        "id": 6819,
+        "nodeType": "ImportDirective",
+        "scope": 6844,
+        "sourceUnit": 5114,
+        "src": "58:30:65",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/introspection/KIP13.sol",
+        "file": "../../introspection/KIP13.sol",
+        "id": 6820,
+        "nodeType": "ImportDirective",
+        "scope": 6844,
+        "sourceUnit": 1679,
+        "src": "89:39:65",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6821,
+              "name": "KIP13",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1678,
+              "src": "156:5:65",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KIP13_$1678",
+                "typeString": "contract KIP13"
+              }
+            },
+            "id": 6822,
+            "nodeType": "InheritanceSpecifier",
+            "src": "156:5:65"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6823,
+              "name": "IKIP37Receiver",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5113,
+              "src": "163:14:65",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IKIP37Receiver_$5113",
+                "typeString": "contract IKIP37Receiver"
+              }
+            },
+            "id": 6824,
+            "nodeType": "InheritanceSpecifier",
+            "src": "163:14:65"
+          }
+        ],
+        "contractDependencies": [
+          1626,
+          1678,
+          5113
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6843,
+        "linearizedBaseContracts": [
+          6843,
+          5113,
+          1678,
+          1626
+        ],
+        "name": "KIP37Receiver",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6841,
+              "nodeType": "Block",
+              "src": "205:165:65",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        },
+                        "id": 6838,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "hexValue": "30",
+                                  "id": 6829,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "261:1:65",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  },
+                                  "value": "0"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  }
+                                ],
+                                "id": 6828,
+                                "name": "KIP37Receiver",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6843,
+                                "src": "247:13:65",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_KIP37Receiver_$6843_$",
+                                  "typeString": "type(contract KIP37Receiver)"
+                                }
+                              },
+                              "id": 6830,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "247:16:65",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_KIP37Receiver_$6843",
+                                "typeString": "contract KIP37Receiver"
+                              }
+                            },
+                            "id": 6831,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "onKIP37Received",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 5095,
+                            "src": "247:32:65",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
+                              "typeString": "function (address,address,uint256,uint256,bytes memory) external returns (bytes4)"
+                            }
+                          },
+                          "id": 6832,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "selector",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "247:41:65",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "^",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "hexValue": "30",
+                                  "id": 6834,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "321:1:65",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  },
+                                  "value": "0"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  }
+                                ],
+                                "id": 6833,
+                                "name": "KIP37Receiver",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6843,
+                                "src": "307:13:65",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_KIP37Receiver_$6843_$",
+                                  "typeString": "type(contract KIP37Receiver)"
+                                }
+                              },
+                              "id": 6835,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "307:16:65",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_KIP37Receiver_$6843",
+                                "typeString": "contract KIP37Receiver"
+                              }
+                            },
+                            "id": 6836,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "onKIP37BatchReceived",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 5112,
+                            "src": "307:37:65",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
+                              "typeString": "function (address,address,uint256[] memory,uint256[] memory,bytes memory) external returns (bytes4)"
+                            }
+                          },
+                          "id": 6837,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "selector",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "307:46:65",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          }
+                        },
+                        "src": "247:106:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 6827,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1677,
+                      "src": "215:18:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 6839,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "215:148:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6840,
+                  "nodeType": "ExpressionStatement",
+                  "src": "215:148:65"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6842,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6825,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "195:2:65"
+            },
+            "returnParameters": {
+              "id": 6826,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "205:0:65"
+            },
+            "scope": 6843,
+            "src": "184:186:65",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6844,
+        "src": "130:242:65"
+      }
+    ],
+    "src": "33:340:65"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Receiver.sol",
+    "exportedSymbols": {
+      "KIP37Receiver": [
+        6843
+      ]
+    },
+    "id": 6844,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6818,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:65"
+      },
+      {
+        "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/IKIP37Receiver.sol",
+        "file": "./IKIP37Receiver.sol",
+        "id": 6819,
+        "nodeType": "ImportDirective",
+        "scope": 6844,
+        "sourceUnit": 5114,
+        "src": "58:30:65",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/introspection/KIP13.sol",
+        "file": "../../introspection/KIP13.sol",
+        "id": 6820,
+        "nodeType": "ImportDirective",
+        "scope": 6844,
+        "sourceUnit": 1679,
+        "src": "89:39:65",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6821,
+              "name": "KIP13",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1678,
+              "src": "156:5:65",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KIP13_$1678",
+                "typeString": "contract KIP13"
+              }
+            },
+            "id": 6822,
+            "nodeType": "InheritanceSpecifier",
+            "src": "156:5:65"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6823,
+              "name": "IKIP37Receiver",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5113,
+              "src": "163:14:65",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IKIP37Receiver_$5113",
+                "typeString": "contract IKIP37Receiver"
+              }
+            },
+            "id": 6824,
+            "nodeType": "InheritanceSpecifier",
+            "src": "163:14:65"
+          }
+        ],
+        "contractDependencies": [
+          1626,
+          1678,
+          5113
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6843,
+        "linearizedBaseContracts": [
+          6843,
+          5113,
+          1678,
+          1626
+        ],
+        "name": "KIP37Receiver",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6841,
+              "nodeType": "Block",
+              "src": "205:165:65",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        },
+                        "id": 6838,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "hexValue": "30",
+                                  "id": 6829,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "261:1:65",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  },
+                                  "value": "0"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  }
+                                ],
+                                "id": 6828,
+                                "name": "KIP37Receiver",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6843,
+                                "src": "247:13:65",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_KIP37Receiver_$6843_$",
+                                  "typeString": "type(contract KIP37Receiver)"
+                                }
+                              },
+                              "id": 6830,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "247:16:65",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_KIP37Receiver_$6843",
+                                "typeString": "contract KIP37Receiver"
+                              }
+                            },
+                            "id": 6831,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "onKIP37Received",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 5095,
+                            "src": "247:32:65",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
+                              "typeString": "function (address,address,uint256,uint256,bytes memory) external returns (bytes4)"
+                            }
+                          },
+                          "id": 6832,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "selector",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "247:41:65",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "^",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "hexValue": "30",
+                                  "id": 6834,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "321:1:65",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  },
+                                  "value": "0"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  }
+                                ],
+                                "id": 6833,
+                                "name": "KIP37Receiver",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6843,
+                                "src": "307:13:65",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_KIP37Receiver_$6843_$",
+                                  "typeString": "type(contract KIP37Receiver)"
+                                }
+                              },
+                              "id": 6835,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "307:16:65",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_KIP37Receiver_$6843",
+                                "typeString": "contract KIP37Receiver"
+                              }
+                            },
+                            "id": 6836,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "onKIP37BatchReceived",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 5112,
+                            "src": "307:37:65",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
+                              "typeString": "function (address,address,uint256[] memory,uint256[] memory,bytes memory) external returns (bytes4)"
+                            }
+                          },
+                          "id": 6837,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "selector",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "307:46:65",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          }
+                        },
+                        "src": "247:106:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 6827,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1677,
+                      "src": "215:18:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 6839,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "215:148:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6840,
+                  "nodeType": "ExpressionStatement",
+                  "src": "215:148:65"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6842,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6825,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "195:2:65"
+            },
+            "returnParameters": {
+              "id": 6826,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "205:0:65"
+            },
+            "scope": 6843,
+            "src": "184:186:65",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6844,
+        "src": "130:242:65"
+      }
+    ],
+    "src": "33:340:65"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-11-29T07:24:18.475Z",
+  "devdoc": {
+    "methods": {
+      "onKIP37BatchReceived(address,address,uint256[],uint256[],bytes)": {
+        "details": "Handles the receipt of a multiple KIP37 token types. This function is called at the end of a `safeBatchTransferFrom` after the balances have been updated. To accept the transfer(s), this must return `bytes4(keccak256(\"onKIP37BatchReceived(address,address,uint256[],uint256[],bytes)\"))` (i.e. 0x9b49e332, or its own function selector).",
+        "params": {
+          "data": "Additional data with no specified format",
+          "from": "The address which previously owned the token",
+          "ids": "An array containing ids of each token being transferred (order and length must match values array)",
+          "operator": "The address which initiated the batch transfer (i.e. msg.sender)",
+          "values": "An array containing amounts of each token being transferred (order and length must match ids array)"
+        },
+        "return": "`bytes4(keccak256(\"onKIP37BatchReceived(address,address,uint256[],uint256[],bytes)\"))` if transfer is allowed"
+      },
+      "onKIP37Received(address,address,uint256,uint256,bytes)": {
+        "details": "Handles the receipt of a single KIP37 token type. This function is called at the end of a `safeTransferFrom` after the balance has been updated. To accept the transfer, this must return `bytes4(keccak256(\"onKIP37Received(address,address,uint256,uint256,bytes)\"))` (i.e. 0xe78b3325, or its own function selector).",
+        "params": {
+          "data": "Additional data with no specified format",
+          "from": "The address which previously owned the token",
+          "id": "The ID of the token being transferred",
+          "operator": "The address which initiated the transfer (i.e. msg.sender)",
+          "value": "The amount of tokens being transferred"
+        },
+        "return": "`bytes4(keccak256(\"onKIP37Received(address,address,uint256,uint256,bytes)\"))` if transfer is allowed"
+      },
+      "supportsInterface(bytes4)": {
+        "details": "See `IKIP13.supportsInterface`.     * Time complexity O(1), guaranteed to always use less than 30 000 gas."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

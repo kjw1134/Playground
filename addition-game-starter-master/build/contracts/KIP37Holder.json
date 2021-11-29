@@ -1,0 +1,1308 @@
+{
+  "contractName": "KIP37Holder",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "onKIP37Received",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "onKIP37BatchReceived",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"onKIP37BatchReceived\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"onKIP37Received\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"See `IKIP13.supportsInterface`.     * Time complexity O(1), guaranteed to always use less than 30 000 gas.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Holder.sol\":\"KIP37Holder\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/introspection/IKIP13.sol\":{\"keccak256\":\"0xf7415711dbec40bc633af7d8cb5c3c0bc3d1ed97fd8c13f795a03eb3073ea219\",\"urls\":[\"bzz-raw://c3583b6a39425cc359116200869b24b50c2293c6e68d09c4d4b804861b431ae0\",\"dweb:/ipfs/QmWZWD7oEtz7QbM5AmUtrbZpDVkxzeX8JGcVkUVmvRRaVa\"]},\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/introspection/KIP13.sol\":{\"keccak256\":\"0x84681701e79f53ba1e9660b6a130bba31880d66cee996ab7d5567d239155c6da\",\"urls\":[\"bzz-raw://f35082a91314003570fca4b2426cd3f79db0eb846a456842db4a11f473db924d\",\"dweb:/ipfs/QmYdHAyrXSKjiDxji2L7bTpuPSSqjkwaKT7WM98Yrcy8KD\"]},\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/IKIP37Receiver.sol\":{\"keccak256\":\"0x83496b998885cfa74818ccd60afaca8c9f54c70ef6f4487b3a0b904492c2bc30\",\"urls\":[\"bzz-raw://91c2ed0e1537e01e3db85a43c45beea791373a0c71b9d067cd26454300e52b80\",\"dweb:/ipfs/Qmf1656ZesFhztMGgZY7uC8A5GgZXZyy9FCTvJrHfJnb9X\"]},\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Holder.sol\":{\"keccak256\":\"0x19f5b97411a60418ebccfe7dfa555e0ad7ea4d577fc7288f74342e133340650a\",\"urls\":[\"bzz-raw://a68550b29b5f1cdc4032c2c4f737535cf853b705104f9cc9e319c8cec59b9345\",\"dweb:/ipfs/QmbLER12UWLF14kFsBhzLWTcLRewSPwXt7qL8tEGkmL1Ry\"]},\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Receiver.sol\":{\"keccak256\":\"0xf02f2cbbd9bffa04013afcad160419b298b8ef52068c8ad66812e5e47f4e9738\",\"urls\":[\"bzz-raw://2038845dafa5d1a22beca39fec032c726b0058fb0bff35cfc98cb1a4d82ee68c\",\"dweb:/ipfs/QmSnpbGVG4VP8KAoG9GRKfVsU9QHDbY2xSVrbSvX4wsTTr\"]}},\"version\":1}",
+  "bytecode": "0x608060405261001a6301ffc9a760e01b61007260201b60201c565b61006d600073ffffffffffffffffffffffffffffffffffffffff16639b49e332905060e01b600073ffffffffffffffffffffffffffffffffffffffff1663e78b3325905060e01b1861007260201b60201c565b61017a565b63ffffffff60e01b817bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916141561010e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f4b495031333a20696e76616c696420696e74657266616365206964000000000081525060200191505060405180910390fd5b6001600080837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b610547806101896000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806301ffc9a7146100465780639b49e332146100ab578063e78b332514610320575b600080fd5b6100916004803603602081101561005c57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19169060200190929190505050610481565b604051808215151515815260200191505060405180910390f35b6102cc600480360360a08110156100c157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019064010000000081111561011e57600080fd5b82018360208201111561013057600080fd5b8035906020019184602083028401116401000000008311171561015257600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600081840152601f19601f820116905080830192505050505050509192919290803590602001906401000000008111156101b257600080fd5b8201836020820111156101c457600080fd5b803590602001918460208302840111640100000000831117156101e657600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561024657600080fd5b82018360208201111561025857600080fd5b8035906020019184600183028401116401000000008311171561027a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104e8565b60405180827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200191505060405180910390f35b61042d600480360360a081101561033657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919080359060200190929190803590602001906401000000008111156103a757600080fd5b8201836020820111156103b957600080fd5b803590602001918460018302840111640100000000831117156103db57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104fd565b60405180827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200191505060405180910390f35b6000806000837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200190815260200160002060009054906101000a900460ff169050919050565b6000639b49e33260e01b905095945050505050565b600063e78b332560e01b90509594505050505056fea265627a7a72315820fa1c35531750d406a6c08290584ac220efad96eb0a6c4a42ffcb36dec218a99a64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806301ffc9a7146100465780639b49e332146100ab578063e78b332514610320575b600080fd5b6100916004803603602081101561005c57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19169060200190929190505050610481565b604051808215151515815260200191505060405180910390f35b6102cc600480360360a08110156100c157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019064010000000081111561011e57600080fd5b82018360208201111561013057600080fd5b8035906020019184602083028401116401000000008311171561015257600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600081840152601f19601f820116905080830192505050505050509192919290803590602001906401000000008111156101b257600080fd5b8201836020820111156101c457600080fd5b803590602001918460208302840111640100000000831117156101e657600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561024657600080fd5b82018360208201111561025857600080fd5b8035906020019184600183028401116401000000008311171561027a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104e8565b60405180827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200191505060405180910390f35b61042d600480360360a081101561033657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919080359060200190929190803590602001906401000000008111156103a757600080fd5b8201836020820111156103b957600080fd5b803590602001918460018302840111640100000000831117156103db57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104fd565b60405180827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200191505060405180910390f35b6000806000837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916815260200190815260200160002060009054906101000a900460ff169050919050565b6000639b49e33260e01b905095945050505050565b600063e78b332560e01b90509594505050505056fea265627a7a72315820fa1c35531750d406a6c08290584ac220efad96eb0a6c4a42ffcb36dec218a99a64736f6c63430005100032",
+  "sourceMap": "89:476:62:-;;;712:39:12;380:10;731:19;;712:18;;;:39;;:::i;:::-;215:148:65;321:1;307:37;;;:46;;;;261:1;247:32;;;:41;;;;:106;215:18;;;:148;;:::i;:::-;89:476:62;;1431:189:12;1521:10;1506:25;;:11;:25;;;;;1498:65;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1609:4;1573:20;:33;1594:11;1573:33;;;;;;;;;;;;;;;;;;:40;;;;;;;;;;;;;;;;;;1431:189;:::o;89:476:62:-;;;;;;;",
+  "deployedSourceMap": "89:476:62:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;89:476:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;907:133:12;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;907:133:12;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;337:226:62;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;337:226:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;337:226:62;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;337:226:62;;;;;;101:9:-1;95:2;81:12;77:21;67:8;63:36;60:51;39:11;25:12;22:29;11:108;8:2;;;132:1;129;122:12;8:2;337:226:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;337:226:62;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;337:226:62;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;337:226:62;;;;;;101:9:-1;95:2;81:12;77:21;67:8;63:36;60:51;39:11;25:12;22:29;11:108;8:2;;;132:1;129;122:12;8:2;337:226:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;337:226:62;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;337:226:62;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;337:226:62;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;337:226:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;337:226:62;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;133:198;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;133:198:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;133:198:62;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;133:198:62;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;133:198:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;133:198:62;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;907:133:12;977:4;1000:20;:33;1021:11;1000:33;;;;;;;;;;;;;;;;;;;;;;;;;;;993:40;;907:133;;;:::o;337:226:62:-;497:6;522:34;;;515:41;;337:226;;;;;;;:::o;133:198::-;270:6;295:29;;;288:36;;133:198;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.5.0;\n\nimport \"./KIP37Receiver.sol\";\n\ncontract KIP37Holder is KIP37Receiver {\n    function onKIP37Received(\n        address,\n        address,\n        uint256,\n        uint256,\n        bytes memory\n    ) public returns (bytes4) {\n        return this.onKIP37Received.selector;\n    }\n\n    function onKIP37BatchReceived(\n        address,\n        address,\n        uint256[] memory,\n        uint256[] memory,\n        bytes memory\n    ) public returns (bytes4) {\n        return this.onKIP37BatchReceived.selector;\n    }\n}\n",
+  "sourcePath": "C:\\Users\\kjw\\Desktop\\newproject_branch\\addition-game-starter-master\\contracts\\klaytn-contracts\\token\\KIP37\\KIP37Holder.sol",
+  "ast": {
+    "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Holder.sol",
+    "exportedSymbols": {
+      "KIP37Holder": [
+        6398
+      ]
+    },
+    "id": 6399,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6352,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:62"
+      },
+      {
+        "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Receiver.sol",
+        "file": "./KIP37Receiver.sol",
+        "id": 6353,
+        "nodeType": "ImportDirective",
+        "scope": 6399,
+        "sourceUnit": 6844,
+        "src": "58:29:62",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6354,
+              "name": "KIP37Receiver",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6843,
+              "src": "113:13:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KIP37Receiver_$6843",
+                "typeString": "contract KIP37Receiver"
+              }
+            },
+            "id": 6355,
+            "nodeType": "InheritanceSpecifier",
+            "src": "113:13:62"
+          }
+        ],
+        "contractDependencies": [
+          1626,
+          1678,
+          5113,
+          6843
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6398,
+        "linearizedBaseContracts": [
+          6398,
+          6843,
+          5113,
+          1678,
+          1626
+        ],
+        "name": "KIP37Holder",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6374,
+              "nodeType": "Block",
+              "src": "278:53:62",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6370,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9984,
+                        "src": "295:4:62",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KIP37Holder_$6398",
+                          "typeString": "contract KIP37Holder"
+                        }
+                      },
+                      "id": 6371,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "onKIP37Received",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6375,
+                      "src": "295:20:62",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
+                        "typeString": "function (address,address,uint256,uint256,bytes memory) external returns (bytes4)"
+                      }
+                    },
+                    "id": 6372,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "selector",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "295:29:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "functionReturnParameters": 6369,
+                  "id": 6373,
+                  "nodeType": "Return",
+                  "src": "288:36:62"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6375,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onKIP37Received",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6366,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6357,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "167:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6356,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "167:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6359,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "184:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6358,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "184:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6361,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "201:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6360,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "201:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6363,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "218:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6362,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6365,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "235:12:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6364,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "235:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "157:96:62"
+            },
+            "returnParameters": {
+              "id": 6369,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6368,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "270:6:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 6367,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "270:6:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "269:8:62"
+            },
+            "scope": 6398,
+            "src": "133:198:62",
+            "stateMutability": "nonpayable",
+            "superFunction": 5095,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6396,
+              "nodeType": "Block",
+              "src": "505:58:62",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6392,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9984,
+                        "src": "522:4:62",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KIP37Holder_$6398",
+                          "typeString": "contract KIP37Holder"
+                        }
+                      },
+                      "id": 6393,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "onKIP37BatchReceived",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6397,
+                      "src": "522:25:62",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
+                        "typeString": "function (address,address,uint256[] memory,uint256[] memory,bytes memory) external returns (bytes4)"
+                      }
+                    },
+                    "id": 6394,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "selector",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "522:34:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "functionReturnParameters": 6391,
+                  "id": 6395,
+                  "nodeType": "Return",
+                  "src": "515:41:62"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6397,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onKIP37BatchReceived",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6388,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6377,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "376:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6376,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "376:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6379,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "393:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6378,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6382,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "410:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 6380,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "410:7:62",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 6381,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "410:9:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6385,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "436:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 6383,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "436:7:62",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 6384,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "436:9:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6387,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "462:12:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6386,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "366:114:62"
+            },
+            "returnParameters": {
+              "id": 6391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6390,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "497:6:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 6389,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "497:6:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "496:8:62"
+            },
+            "scope": 6398,
+            "src": "337:226:62",
+            "stateMutability": "nonpayable",
+            "superFunction": 5112,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6399,
+        "src": "89:476:62"
+      }
+    ],
+    "src": "33:533:62"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Holder.sol",
+    "exportedSymbols": {
+      "KIP37Holder": [
+        6398
+      ]
+    },
+    "id": 6399,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6352,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:62"
+      },
+      {
+        "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/token/KIP37/KIP37Receiver.sol",
+        "file": "./KIP37Receiver.sol",
+        "id": 6353,
+        "nodeType": "ImportDirective",
+        "scope": 6399,
+        "sourceUnit": 6844,
+        "src": "58:29:62",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6354,
+              "name": "KIP37Receiver",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6843,
+              "src": "113:13:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KIP37Receiver_$6843",
+                "typeString": "contract KIP37Receiver"
+              }
+            },
+            "id": 6355,
+            "nodeType": "InheritanceSpecifier",
+            "src": "113:13:62"
+          }
+        ],
+        "contractDependencies": [
+          1626,
+          1678,
+          5113,
+          6843
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6398,
+        "linearizedBaseContracts": [
+          6398,
+          6843,
+          5113,
+          1678,
+          1626
+        ],
+        "name": "KIP37Holder",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6374,
+              "nodeType": "Block",
+              "src": "278:53:62",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6370,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9984,
+                        "src": "295:4:62",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KIP37Holder_$6398",
+                          "typeString": "contract KIP37Holder"
+                        }
+                      },
+                      "id": 6371,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "onKIP37Received",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6375,
+                      "src": "295:20:62",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
+                        "typeString": "function (address,address,uint256,uint256,bytes memory) external returns (bytes4)"
+                      }
+                    },
+                    "id": 6372,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "selector",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "295:29:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "functionReturnParameters": 6369,
+                  "id": 6373,
+                  "nodeType": "Return",
+                  "src": "288:36:62"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6375,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onKIP37Received",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6366,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6357,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "167:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6356,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "167:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6359,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "184:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6358,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "184:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6361,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "201:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6360,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "201:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6363,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "218:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6362,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6365,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "235:12:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6364,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "235:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "157:96:62"
+            },
+            "returnParameters": {
+              "id": 6369,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6368,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6375,
+                  "src": "270:6:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 6367,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "270:6:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "269:8:62"
+            },
+            "scope": 6398,
+            "src": "133:198:62",
+            "stateMutability": "nonpayable",
+            "superFunction": 5095,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6396,
+              "nodeType": "Block",
+              "src": "505:58:62",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6392,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9984,
+                        "src": "522:4:62",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KIP37Holder_$6398",
+                          "typeString": "contract KIP37Holder"
+                        }
+                      },
+                      "id": 6393,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "onKIP37BatchReceived",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6397,
+                      "src": "522:25:62",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
+                        "typeString": "function (address,address,uint256[] memory,uint256[] memory,bytes memory) external returns (bytes4)"
+                      }
+                    },
+                    "id": 6394,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "selector",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "522:34:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "functionReturnParameters": 6391,
+                  "id": 6395,
+                  "nodeType": "Return",
+                  "src": "515:41:62"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6397,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onKIP37BatchReceived",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6388,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6377,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "376:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6376,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "376:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6379,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "393:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6378,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6382,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "410:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 6380,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "410:7:62",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 6381,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "410:9:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6385,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "436:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 6383,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "436:7:62",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 6384,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "436:9:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6387,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "462:12:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6386,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "366:114:62"
+            },
+            "returnParameters": {
+              "id": 6391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6390,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6397,
+                  "src": "497:6:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 6389,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "497:6:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "496:8:62"
+            },
+            "scope": 6398,
+            "src": "337:226:62",
+            "stateMutability": "nonpayable",
+            "superFunction": 5112,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6399,
+        "src": "89:476:62"
+      }
+    ],
+    "src": "33:533:62"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-11-29T07:24:18.467Z",
+  "devdoc": {
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "See `IKIP13.supportsInterface`.     * Time complexity O(1), guaranteed to always use less than 30 000 gas."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

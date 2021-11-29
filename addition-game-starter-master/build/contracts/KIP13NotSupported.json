@@ -1,0 +1,104 @@
+{
+  "contractName": "KIP13NotSupported",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol\":\"KIP13NotSupported\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol\":{\"keccak256\":\"0x267f462a836b15398e53a160b1bfdc8c4e616f1f8f66bc0a4f464c1a6e11418a\",\"urls\":[\"bzz-raw://b016e7b052d3f92fd961a9a30d65e2711b66a80f1f3995ca005c70b10ca71a9e\",\"dweb:/ipfs/QmXj8f7mShgo9yW3TkkBszXTJHCUPZ5tFRjmgnFYiYrGHb\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158209b56e4e5d07caf1fb4b3d28cace4bc9eb0d025b2d48103cb0a1953aa78708fc564736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158209b56e4e5d07caf1fb4b3d28cace4bc9eb0d025b2d48103cb0a1953aa78708fc564736f6c63430005100032",
+  "sourceMap": "25:83:20:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:83:20;;;;;;;",
+  "deployedSourceMap": "25:83:20:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\ncontract KIP13NotSupported {\n    // solhint-disable-previous-line no-empty-blocks\n}\n",
+  "sourcePath": "C:\\Users\\kjw\\Desktop\\newproject_branch\\addition-game-starter-master\\contracts\\klaytn-contracts\\mocks\\KIP13\\KIP13NotSupported.sol",
+  "ast": {
+    "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol",
+    "exportedSymbols": {
+      "KIP13NotSupported": [
+        2388
+      ]
+    },
+    "id": 2389,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2387,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:20"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2388,
+        "linearizedBaseContracts": [
+          2388
+        ],
+        "name": "KIP13NotSupported",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 2389,
+        "src": "25:83:20"
+      }
+    ],
+    "src": "0:109:20"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/kjw/Desktop/newproject_branch/addition-game-starter-master/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol",
+    "exportedSymbols": {
+      "KIP13NotSupported": [
+        2388
+      ]
+    },
+    "id": 2389,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2387,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:20"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2388,
+        "linearizedBaseContracts": [
+          2388
+        ],
+        "name": "KIP13NotSupported",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 2389,
+        "src": "25:83:20"
+      }
+    ],
+    "src": "0:109:20"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-11-29T07:24:18.348Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

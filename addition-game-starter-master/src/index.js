@@ -4,7 +4,7 @@ const config={
   rpcURL:'https://api.baobab.klaytn.net:8651'
 }
 
-const contract_address='0xb3e1abb61996d2b5d6a712d2156dfe154edcc451';
+
 const cav = new Caver(config.rpcURL);
                                         //bApp내 사용가능 전역상수
 const agContract = new caver.klay.Contract(DEPLOYED_ABI, DEPLOYED_ADDRESS);
