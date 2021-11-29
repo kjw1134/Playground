@@ -18,6 +18,7 @@ const App = {
 
   start: async function () {
     this.handleLogin();
+    
 
   },
 
@@ -31,15 +32,17 @@ const App = {
 
     try { 
        const accounts = await klaytn.enable();
-       if(accounts)
-       {
+       if(accounts){
         $('#logout').show();
         $('#login').hide();
+
+        klaytn.on('accountsChanged', () =>  location.reload())
+        this.changeUI(accounts);
        }
         
        
        //$('#wallet-address').text('address : ' + accounts);
-       this.changeUI(accounts);
+      // this.changeUI(accounts);
 
      } catch (error) {  
       $('#wallet-address').text('connect wallet failed!');
@@ -89,10 +92,10 @@ const App = {
 
           if(amount){
             
+            //from은 호출하는계정, 컨트렉 deposit함수는 payable이기떄문에 컨트렉주소로 klay 전송
             agContract.methods.deposit().send({
              
               from:callowner,//비앱네 계정인증 완료된 계정만 사용가능
-             // to:agContract._address,
               value:cav.utils.toPeb(amount, "KLAY"),
               gas:'250000'
             })
@@ -126,6 +129,7 @@ const App = {
     const value = '0.5';
     //this.handleSign(agContract._address,walletInstance,value,'250000');
 
+    //from 컨트렉 호출계정
     agContract.methods.transfer(caver.utils.toPeb(value, 'KLAY')).send({
       from:walletInstance,
       gas:'250000'
@@ -178,13 +182,14 @@ const App = {
     // $('#loginModal').modal('hide');
     // $('#login').hide();
     // $('#logout').show();
+    const thisOwnerAddress =await this.callOwner();     
+    const curAddress = String(walletInstance);
+
     $('#game').show();
-     $('#wallet-address').append('<br>'+'<p>'+'my account address: ' + walletInstance +'</p>');
+     $('#wallet-address').append('<br>'+'<p>'+'my account address: ' + curAddress +'</p>');
      $('#contractBalance'). append('<p>'+ '이벤트 잔액 :' +  cav.utils.fromPeb(await this.callContractBalance(), "KLAY") + 'KLAY' + '</p>');
 
-     const thisOwnerAddress =await this.callOwner();     
-     const curAddress = String(walletInstance);
-
+  
      if(thisOwnerAddress.toUpperCase()===curAddress.toUpperCase()){
        $('#owner').show();
      }
